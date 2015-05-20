@@ -8,7 +8,7 @@ fi
 
 echo "================================================================================"
 echo "=                     Kerberos Client installation script                      ="
-echo "=          by Anthony Boutinov (github.com/anthonyboutinov/Kerberos)           ="
+echo "=      by Anthony Boutinov (github.com/anthonyboutinov/kerberos-liferay)       ="
 echo "=                                                                              ="
 echo "=        This script is designed to run on CentOS 6 or 7 and Red Hat.          ="
 echo "=      If you are running a different OS, please modify it accordingly.        ="
