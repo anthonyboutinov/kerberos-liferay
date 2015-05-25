@@ -232,10 +232,11 @@ then
 	
 	cd $DOWNLOADLOCATION
 	wget https://github.com/anthonyboutinov/kerberos-liferay/blob/master/kerberos-hook-6.2.0.1.war?raw=true
+	mv kerberos-hook-6.2.0.1.war?raw=true kerberos-hook-6.2.0.1.war
 	
 	echo
 	echo "Rebooting Tomcat and Apache HTTPd..."
-	$TOMCATLOCATION/bin/shutdown.sh
+	$TOMCATLOCATION/bin/shutdown.sh > /dev/nul
 	apachectl stop
 	
 # 	echo "Performing full compile of the policy after changing httpd_read_user_content's value (this may take up to a minute)..."
