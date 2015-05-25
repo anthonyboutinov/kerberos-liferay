@@ -20,7 +20,7 @@ These scripts are designed for easy and fast installation and configuration of K
   5. You will be asked to let the script to download Liferay Plugins SDK (again, if you want to customize the hook).
   6. You will be asked if you want to simply download the war file from this repository and deploy it to Liferay Portal (this will restart HTTPd and Tomcat).
 
-After that, Liferay will use Kerberos authentication mechanism on **port 80**.
+After that, Liferay will be using Kerberos authentication mechanism on **port 80**.
 
 Minor instructions are embedded into script files themselves. This mostly includes updating download links to newer versions of applications if desired, or checking if paths are identical to what you have on your machines.
 
