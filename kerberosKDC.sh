@@ -163,7 +163,6 @@ echo "Creating database... (this may take a couple of minutes)"
 echo "After it's finished, you will need to give it a new password"
 
 kdb5_util create -r $NAMEUPPER -s  
-# здесь ввод пароля два раза
 
 ###
 
