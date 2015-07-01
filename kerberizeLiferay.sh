@@ -203,6 +203,7 @@ then
 	echo "Downloading Liferay Plugins SDK..."
 
 	# Please, edit this link, if you want a more recent version
+	cd /opt
 	wget http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/6.2.3%20GA4/liferay-plugins-sdk-6.2-ce-ga4-20150416163831865.zip?r=http%3A%2F%2Fwww.liferay.com%2Fdownloads%2Fliferay-portal%2Favailable-releases&ts=1431353316&use_mirror=softlayer-ams
 	mv liferay-plugins-sdk-6.2-ce-ga4-20150416163831865.zip?r=http:%2F%2Fwww.liferay.com%2Fdownloads%2Fliferay-portal%2Favailable-releases plugins.zip
 	unzip plugins.zip > /dev/nul
