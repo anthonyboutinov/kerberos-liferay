@@ -7,20 +7,34 @@ These scripts are designed for easy and fast installation and configuration of K
 
 Before running, inspect the contents of .sh files. Minor instructions are embedded into script files themselves. This mostly includes updating download links to newer versions of applications if desired, or checking if paths are identical to what you have on your machines.
 
-1. Download and run `kerberosKDC.sh` on one server to configure Kerberos KDC. You will be asked to
-  1. enter Kerberos realm name,
-  2. set password for root/admin principal, and
-  3.login-password pair for test principal.
-2. Download and run `kerberosClient.sh` on another server (where you have Liferay Portal) to configure Kerberos Workstation. During this process you will be asked to
-  1. enter credentials for ssh session with the first server and
-  2. enter FQDN for current (client) server.
-3. Download and run `kerberizeLiferay.sh` to install Apache HTTPd, configure it and Apache Tomcat, and perform Liferay Portal kerberization.
-  1. First, you set `TOMCATLOCATION` variable,
-  2. then you will enter vi editor with `$TOMCATLOCATION/conf/server.xml` file. Follow the instructions below (see section [*Apache Tomcat configuration*](https://github.com/anthonyboutinov/kerberos-liferay#apache-tomcat-configuration)).
-  3. Enter KDC domain name and KDC's and admin server's FQDNs.
-  4. You will be asked to let the script to install Liferay IDE (Eclipse), if you want to customize Liferay hook.
-  5. You will be asked to let the script to download Liferay Plugins SDK (again, if you want to customize the hook).
-  6. You will be asked if you want to simply download the war file from this repository and deploy it to Liferay Portal (this will restart HTTPd and Tomcat).
+<ol>
+  <li>
+    Download and run `kerberosKDC.sh` on one server to configure Kerberos KDC. You will be asked to
+    <ol>
+      <li>enter Kerberos realm name,</li>
+      <li>set password for root/admin principal, and</li>
+      <li>login-password pair for test principal.</li>
+    </ol>
+  </li>
+  <li>
+    Download and run `kerberosClient.sh` on another server (where you have Liferay Portal) to configure Kerberos Workstation. During this process you will be asked to
+    <ol>
+      <li>enter credentials for ssh session with the first server and</li>
+      <li>enter FQDN for current (client) server.</li>
+    </ol>
+  </li>
+  <li>
+  Download and run `kerberizeLiferay.sh` to install Apache HTTPd, configure it and Apache Tomcat, and perform Liferay Portal kerberization.
+    <ol>
+      <li>First, you set `TOMCATLOCATION` variable,</li>
+      <li>then you will enter vi editor with `$TOMCATLOCATION/conf/server.xml` file. Follow the instructions below (see section [*Apache Tomcat configuration*](https://github.com/anthonyboutinov/kerberos-liferay#apache-tomcat-configuration)).</li>
+      <li>Enter KDC domain name and KDC's and admin server's FQDNs.</li>
+      <li>You will be asked to let the script to install Liferay IDE (Eclipse), if you want to customize Liferay hook.</li>
+      <li>You will be asked to let the script to download Liferay Plugins SDK (again, if you want to customize the hook).</li>
+      <li>You will be asked if you want to simply download the war file from this repository and deploy it to Liferay Portal (this will restart HTTPd and Tomcat).</li>
+    </ol>
+  </li>
+</ol>
 
 After that, Liferay will be using Kerberos authentication protocol on **port 80**.
 
@@ -46,4 +60,4 @@ When presented with edit screen of `$TOMCATLOCATION/conf/server.xml` file, make 
 ```
 
 --
-Liferay Portal Kerberos-Hook is based on [Morgan Patou's one](http://www.dbi-services.com/index.php/blog/entry/kerberos-sso-with-liferay-61).
+Liferay Portal Kerberos-Hook is based on [Morgan Patou's post](http://www.dbi-services.com/index.php/blog/entry/kerberos-sso-with-liferay-61) ([WebArchive mirror](https://web.archive.org/web/20141130083513/http://www.dbi-services.com/index.php/blog/entry/kerberos-sso-with-liferay-61)).
